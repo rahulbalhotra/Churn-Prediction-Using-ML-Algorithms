@@ -4,9 +4,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 
-#load the model from disk
-from sklearn.externals import joblib
-model = joblib.load(r"./notebook/model.sav")
+model = pickle.load(open("/notebook/model.sav", "rb"))
 
 #Import python scripts
 from preprocessing import preprocess
